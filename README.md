@@ -18,5 +18,6 @@ The structure of this project:
 
 The other folders was generated using the model in the folder PrograWeb
 
-The result is a simple page that you show below
+:construction_worker: The result of this model it is locate in the folder webPageAcceleo/result and the simple page you show below
+
 ![result](./assets/result.PNG)
