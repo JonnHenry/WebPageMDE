@@ -1,4 +1,4 @@
-# Model-driven Development Environment
+# Model-driven engineering (MDE)
 ![Model-driven Development Environment](./assets/image.jpg)
 
 
