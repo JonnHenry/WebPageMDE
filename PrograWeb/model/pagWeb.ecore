@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="webPage" nsURI="http://pWebAvanzada/webPage" nsPrefix="pWebAvanzada.webPage">
+  <eClassifiers xsi:type="ecore:EClass" name="WebPage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="footer" eType="#//Footer"
+        containment="true" eOpposite="#//Footer/webpage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="map" upperBound="-1" eType="#//Map"
+        containment="true" eOpposite="#//Map/webpage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="header" eType="#//Header"
+        containment="true" eOpposite="#//Header/webpage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subtitle" lowerBound="1"
+        upperBound="-1" eType="#//Subtitle" containment="true" eOpposite="#//Subtitle/webpage"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Footer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="info" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webpage" lowerBound="1"
+        eType="#//WebPage" eOpposite="#//WebPage/footer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="style" lowerBound="1" eType="#//Style"
+        containment="true" eOpposite="#//Style/footer"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Map">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="long" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webpage" lowerBound="1"
+        eType="#//WebPage" eOpposite="#//WebPage/map"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="style" lowerBound="1" eType="#//Style"
+        containment="true" eOpposite="#//Style/map"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Paragraph">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="style" lowerBound="1" eType="#//Style"
+        containment="true" eOpposite="#//Style/paragraph"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="topic" eType="#//Subtitle"
+        eOpposite="#//Subtitle/paragraph"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Header">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webpage" lowerBound="1"
+        eType="#//WebPage" eOpposite="#//WebPage/header"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="style" lowerBound="1" eType="#//Style"
+        containment="true" eOpposite="#//Style/header"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Style">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="font" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="font_size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="background_color" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="border" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="margin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="padding" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text_align" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="border_radius" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="height" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="left" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="footer" eType="#//Footer"
+        eOpposite="#//Footer/style"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="map" eType="#//Map" eOpposite="#//Map/style"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paragraph" eType="#//Paragraph"
+        eOpposite="#//Paragraph/style"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subtitle" eType="#//Subtitle"
+        eOpposite="#//Subtitle/style"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="header" eType="#//Header"
+        eOpposite="#//Header/style"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="background" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bottom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="display" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Subtitle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="subtitle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paragraph" eType="#//Paragraph"
+        containment="true" eOpposite="#//Paragraph/topic"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webpage" lowerBound="1"
+        eType="#//WebPage" eOpposite="#//WebPage/subtitle"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="style" lowerBound="1" eType="#//Style"
+        containment="true" eOpposite="#//Style/subtitle"/>
+  </eClassifiers>
+</ecore:EPackage>

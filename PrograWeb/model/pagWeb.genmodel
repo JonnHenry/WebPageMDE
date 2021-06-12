@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/PrograWeb/src" modelPluginID="PrograWeb" modelName="PagWeb"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>pagWeb.ecore</foreignModel>
+  <genPackages prefix="WebPage" disposableProviderFactory="true" ecorePackage="pagWeb.ecore#/">
+    <genClasses ecoreClass="pagWeb.ecore#//WebPage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//WebPage/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pagWeb.ecore#//WebPage/footer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pagWeb.ecore#//WebPage/map"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pagWeb.ecore#//WebPage/header"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pagWeb.ecore#//WebPage/subtitle"/>
+    </genClasses>
+    <genClasses ecoreClass="pagWeb.ecore#//Footer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Footer/info"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference pagWeb.ecore#//Footer/webpage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pagWeb.ecore#//Footer/style"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Footer/logo"/>
+    </genClasses>
+    <genClasses ecoreClass="pagWeb.ecore#//Map">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Map/lat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Map/long"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference pagWeb.ecore#//Map/webpage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pagWeb.ecore#//Map/style"/>
+    </genClasses>
+    <genClasses ecoreClass="pagWeb.ecore#//Paragraph">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Paragraph/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pagWeb.ecore#//Paragraph/style"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference pagWeb.ecore#//Paragraph/topic"/>
+    </genClasses>
+    <genClasses ecoreClass="pagWeb.ecore#//Header">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Header/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Header/logo"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference pagWeb.ecore#//Header/webpage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pagWeb.ecore#//Header/style"/>
+    </genClasses>
+    <genClasses ecoreClass="pagWeb.ecore#//Style">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/font"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/font_size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/background_color"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/border"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/margin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/padding"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/text_align"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/border_radius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/left"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference pagWeb.ecore#//Style/footer"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference pagWeb.ecore#//Style/map"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference pagWeb.ecore#//Style/paragraph"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference pagWeb.ecore#//Style/subtitle"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference pagWeb.ecore#//Style/header"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/background"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/bottom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Style/display"/>
+    </genClasses>
+    <genClasses ecoreClass="pagWeb.ecore#//Subtitle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pagWeb.ecore#//Subtitle/subtitle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pagWeb.ecore#//Subtitle/paragraph"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference pagWeb.ecore#//Subtitle/webpage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pagWeb.ecore#//Subtitle/style"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

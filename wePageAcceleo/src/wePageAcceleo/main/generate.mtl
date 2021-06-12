@@ -1,0 +1,75 @@
+[comment encoding = UTF-8 /]
+[module generate('http://pWebAvanzada/webPage')]
+
+
+[template public generateElement(aWebPage : WebPage)]
+[comment @main/]
+
+[file (aWebPage.name + '.html',false, 'UTF-8')]
+<HTML>
+	<HEAD>
+		<TITLE>[aWebPage.name/]</TITLE>
+	</HEAD>
+	<BODY>
+		<HEADER>
+			<div style='
+				color: [aWebPage.header.style.color/];
+				font: [aWebPage.header.style.font/];
+				font-size: [aWebPage.header.style.font_size/];
+				border: [aWebPage.header.style.border/];
+				background: [aWebPage.header.style.background/];
+				background-color: [aWebPage.header.style.background_color/];
+				border-radius: [aWebPage.header.style.border_radius/];
+				position: [aWebPage.header.style.position/];
+				padding: [aWebPage.header.style.padding/];
+				margin: [aWebPage.header.style.margin/];
+				text-align: [aWebPage.header.style.text_align/];
+				display: [aWebPage.header.style.display/];
+			'><img src='[aWebPage.header.logo/]' style='height: 25px;'>  [aWebPage.header.title/]</div>
+		</HEADER>
+
+		<div>
+			[for (tit: Subtitle|aWebPage.subtitle)]
+				<div style='
+					color: [tit.style.color/];
+					font: [tit.style.font/];
+					font-size: [tit.style.font_size/];
+					border: [tit.style.border/];
+					border-radius: [tit.style.border_radius/];
+					position: [tit.style.position/];
+					padding: [tit.style.padding/];
+					margin: [tit.style.margin/];
+					text-align: [tit.style.text_align/];
+				'>[tit.subtitle/]</div>
+
+				[for (prgph:Paragraph|tit.paragraph)]
+					<p style='
+						color: [prgph.style.color/];
+						font-size: [prgph.style.font_size/];
+						margin: [prgph.style.margin/];
+					'>[prgph.text/]</p>
+				[/for]
+
+			[/for]
+		</div>
+
+		<FOOTER>
+			<div style='
+				color: [aWebPage.footer.style.color/];
+				font: [aWebPage.footer.style.font/];
+				left: [aWebPage.footer.style.left/];
+				bottom: [aWebPage.footer.style.bottom/];
+				width: [aWebPage.footer.style.width/];
+				font-size: [aWebPage.footer.style.font_size/];
+				background-color: [aWebPage.footer.style.background_color/];
+				padding: [aWebPage.footer.style.padding/];
+				border: [aWebPage.footer.style.border/];
+				position: [aWebPage.footer.style.position/];
+				text-align: [aWebPage.footer.style.text_align/];
+			'><img src='[aWebPage.footer.logo/]' style='height: 25px;'>  [aWebPage.footer.info/]</div>
+		</FOOTER>
+	</BODY>
+</HTML>
+[/file]
+
+[/template]
